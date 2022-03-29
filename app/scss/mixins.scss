@@ -10,12 +10,11 @@
 
 @mixin desktop {
     @media (min-width: 1200px)  {
-        @content;
+        @content;        
     }
 }
 
 @mixin visibility-hidden {
-
   position: absolute;
   width: 1px;
   height: 1px;
@@ -26,5 +25,15 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
 
+@mixin intro-background {
+  background: image-set( 
+        url('../img/header-bg.jpg') 1x,
+        url('../img/header-bg.webp') 2x
+      ) center/cover no-repeat;  
+    background: -webkit-image-set( 
+        url('../img/header-bg.jpg') 1x,
+        url('../img/header-bg.webp') 2x
+      ) center/cover no-repeat;
 }

@@ -29,6 +29,9 @@
     margin-bottom: 17px;
     @include tablet {
       display: none;
+      &:hover {
+      opacity: .3;
+      }
     }
     &::after, &::before, & span {
       content: "";
@@ -48,9 +51,9 @@
     &::before{
       top: 0;
     }
-    &:hover {
-      opacity: .3;
-    }
+    // &:hover {
+    //   opacity: .3;
+    // }
   }
   &__burger.active {    
     z-index: 12;
@@ -70,23 +73,15 @@
     opacity: 1;
     transition: all linear .2s;
   }
-  &__burger.active::after:hover,
-  &__burger.active::before:hover {
-    opacity: .3;
-  }
+  // &__burger.active::after:hover,
+  // &__burger.active::before:hover {
+  //   opacity: .3;
+  // }
   &__burger.active span {
     display: none;
   }
   &__intro{
-    // background: #000 url('../img/header-bg.jpg') center/cover no-repeat;
-    background: image-set( 
-        url('../img/header-bg.jpg') 1x,
-        url('../img/header-bg.webp') 2x
-      ) center/cover no-repeat;  
-    background: -webkit-image-set( 
-        url('../img/header-bg.jpg') 1x,
-        url('../img/header-bg.webp') 2x
-      ) center/cover no-repeat;   
+    @include intro-background; 
     width: 100%;    
     z-index: 1;
     display: flex;
@@ -102,6 +97,9 @@
       height: 57px;
       background:  url("../img/header-elem.png") center/ cover no-repeat;
     } 
+    @include tablet {
+      padding: 75px 0 91px;
+    }
     @include desktop {
       padding: 78px 0 90px;
     }   
