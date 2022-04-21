@@ -1,3 +1,28 @@
-<header>
-    Шапка сайта
-</header>
+<header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <picture>
+					    <source media="(min-width: 1200px)" srcset="img/logo-desk.svg" width="187" height="97">
+					    <source media="(min-width: 768px)" srcset="img/logo-tab.svg" width="102" height="84">
+					    <img class="header__logo" width="102" height="82" src="img/logo-mob.svg" alt="лого">
+					</picture>               
+                    <nav class="navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item"><a class="navigation__link" href="#">Главная</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">Фото и видео</a></li>      
+                            <li class="navigation__item"><a class="navigation__link" href="#">Форма отзыва</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">HTML academy</a></li>
+                        </ul>
+                    </nav>
+                    <button class="header__burger" type="button" aria-label="Открыть главное меню"><span></span></button>
+                </div>
+            </div>
+            <div class="header__intro" aria-label="Карточка приветствия">  
+                <h1 class="header__title ">Welcome to the gorgeous Sedona</h1>
+                <p class="header__subtitle">"Because the Grand Canyon sucks!"</p>
+                
+            	<img class="header__text" src="img/header-text.svg" alt="Карточка приветствия" width="282" height="209">
+                          
+            </div>
+             
+        </header>

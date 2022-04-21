@@ -19,7 +19,7 @@ const buildFolder = 'docs'; //папка куда собирается прое�
 function html() {
     return src([sourceFolder + '/html/**.html'])
         .pipe(include())
-        .pipe(webpHTML())
+        // .pipe(webpHTML())
         .pipe(gulpHtmlBemValidator())
         .pipe(cachebust({
             type: 'timestamp'
@@ -95,12 +95,18 @@ function img() {
       squoosh(() => ({
         encodeOptions: {
           mozjpeg: {},
-          webp: {}
+          webp: {},
+          oxipng: {}
         },
       }))
     )
     .pipe(dest(buildFolder + "/img"));
 };
+
+function svg() {
+    return src(sourceFolder + '/img/**/*.svg')
+        .pipe(dest(buildFolder + '/img'))
+}
 
 function fonts() {
     return src(sourceFolder + '/fonts/**/*')
@@ -130,8 +136,8 @@ function serve() {
 };
 
 
-exports.build = series(clear, scss, js, img, sprite, fonts, html);
-exports.watch = series(clear, scss, js, img, sprite, fonts, html, serve);
+exports.build = series(clear, scss, js, img, svg, sprite, fonts, html);
+exports.watch = series(clear, scss, js, img, svg, sprite, fonts, html, serve);
 exports.bem = bem;
 exports.video = video;
 exports.clear = clear;
