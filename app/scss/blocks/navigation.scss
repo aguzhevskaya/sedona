@@ -30,7 +30,7 @@
         transition: background-color .2s linear;  
         position: relative; 
         padding: 9px 0 5px;    
-        &_disabled {
+        &--disabled {
             background-color: #E5E5E5;
         }
         @include tablet {
@@ -90,20 +90,20 @@
                 color: #000000;
                 opacity: .3;
             }
-            &_active {
+            &--active {
                 color: #766357;
                 opacity: 1;
                 transition: color .2s linear, opacity .2s linear;
             }
-            &_active:hover {
+            &--active:hover {
                 color: #604E43;
             }
-            &_active:focus {
+            &--active:focus {
                 opacity: .3;
             }
         }
     }
-    &_active {
+    &--active {
         transform: translateY(0%);
         opacity: 1;
     }

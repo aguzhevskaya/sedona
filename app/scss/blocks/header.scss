@@ -52,25 +52,25 @@
       top: 0;
     }
   }
-  &__burger_active {    
+  &__burger--active {    
     z-index: 12;
     transition: opasity linear .2s;
   }
-  &__burger_active::before {
+  &__burger--active::before {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
     background-color: #fff;
     opacity: 1;
     transition: all linear .2s;
   }
-  &__burger_active::after {
+  &__burge--active::after {
     transform: translateY(-50%) rotate(-45deg);
     top: 50%;
     background-color: #fff;    
     opacity: 1;
     transition: all linear .2s;
   }
-  &__burger_active span {
+  &__burger--active span {
     display: none;
   }
   &__intro{
