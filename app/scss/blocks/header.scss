@@ -51,33 +51,26 @@
     &::before{
       top: 0;
     }
-    // &:hover {
-    //   opacity: .3;
-    // }
   }
-  &__burger.active {    
+  &__burger_active {    
     z-index: 12;
     transition: opasity linear .2s;
   }
-  &__burger.active::before {
+  &__burger_active::before {
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
     background-color: #fff;
     opacity: 1;
     transition: all linear .2s;
   }
-  &__burger.active::after {
+  &__burger_active::after {
     transform: translateY(-50%) rotate(-45deg);
     top: 50%;
     background-color: #fff;    
     opacity: 1;
     transition: all linear .2s;
   }
-  // &__burger.active::after:hover,
-  // &__burger.active::before:hover {
-  //   opacity: .3;
-  // }
-  &__burger.active span {
+  &__burger_active span {
     display: none;
   }
   &__intro{
