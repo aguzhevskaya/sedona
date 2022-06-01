@@ -2,6 +2,12 @@
     font: $fw #{$fz}/#{$lh} $ff;
 }
 
+@mixin mob-420 {
+    @media (min-width: 420px) {
+        @content;
+      } 
+}   
+
 @mixin tablet {
     @media (min-width: 768px)  {
         @content;
@@ -37,3 +43,5 @@
         url('../img/header-bg.webp') 2x
       ) center/cover no-repeat;
 }
+
+   
