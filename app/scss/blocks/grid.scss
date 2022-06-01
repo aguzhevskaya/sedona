@@ -1,0 +1,86 @@
+.grid-container {
+	@include tablet {
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 256px 256px;
+		grid-template-areas: 
+			"grid grid grid"
+			"grid grid grid"
+			"grid--2 grid--2 grid--2"
+			"grid--grey grid--grey2 grid--grey3";
+	}
+}
+
+.grid {
+	@include tablet {
+		display: -ms-grid;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 256px 1fr;
+		grid-template-areas: 
+			"content picture picture"
+			"items items items";
+		grid-area: grid;
+	}
+	&__content {
+		grid-area: content;
+	}
+	&__picture {
+		grid-area: picture;
+	}
+	&__items {
+		grid-area : items;
+		@include tablet {
+			display: -ms-grid;
+		    display: grid;
+			grid-template-columns: 1fr 1fr 1fr; 
+			grid-gap: 55px;
+		}
+		@include desktop {
+			grid-gap: 80px;
+		}
+		&--2 {
+			@include tablet {
+				grid-column: 3;
+			}
+		}
+		&--3 {
+			@include tablet {
+				grid-column: 2;
+				grid-row: 1;
+			}
+		}
+	}
+	&--2 {
+		@include tablet {
+			display: -ms-grid;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-areas: 
+				"picture picture content";
+			grid-area: grid--2;
+
+		}
+		&.grid__content {
+			@include tablet {
+				grid-column: 3;
+			}	
+		}
+	}
+	&--grey {
+		@include tablet {
+			// grid-template-columns: 1fr 1fr 1fr;
+			// grid-template-rows: 1fr;
+			// grid-template-areas: none;
+			display: block;
+			grid-area: grid--grey;
+		}
+	}
+	&--grey2 {
+		grid-area: grid--grey2;
+	}
+	&--grey3 {
+		grid-area: grid--grey3;
+	}
+}

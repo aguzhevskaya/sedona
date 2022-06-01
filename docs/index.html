@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css?t=1651070165130">
+    <link rel="stylesheet" href="css/main.css?t=1654081853896">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<!-- <body>
-    <img class="test" src="img/test-mob.jpg" alt="">
+<body>
+<!--     <img class="test" src="img/test-desk.jpg" alt="">
     <style>
 .test {
 position: absolute;
@@ -21,9 +21,23 @@ left: 50%;
 transform: translateX(-50%);
 z-index: 100;
 opacity: .3;
-pointer-events: none;    }
+pointer-events: none; 
+}
     </style> -->
-
+<!--    
+  <img class="test" src="img/test-mob.jpg" alt="">
+    <style>
+.test {
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+z-index: 100;
+opacity: .3;
+pointer-events: none; 
+}
+    </style>
+ -->
     <div class="wrapper">
 
 
@@ -60,75 +74,84 @@ pointer-events: none;    }
 		<h1 class="about__title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
 		<p class="about__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 	</div>
-	<ol class="about-list list">
-		<li class="about-list__item">
-			<div class="about-list__item-content container">
+	<ol class="about-list grid-container">
+		<li class="about-list__item grid">
+			<div class="about-list__item-content container grid__content">
 				<h2 class="about-list__item-title">Настоящий городок</h2>
 				<div class="about-list__item-num">– №1 –</div>
 				<p class="about-list__item-subtitle">Седона не аттракцион для туристов, там течет своя жизнь</p>
 			</div>
-			<div class="about-list__item-picture">
-				<picture>
-				    <source media="(min-width: 1200px)" srcset="img/list-img__desk.jpg" width="800" height="256">
-				    <source media="(min-width: 768px)" srcset="img/list-img__tab.jpg" width="517" height="256">
-				   	<img class="about-list__item-img" src="img/list-img__mob.jpg" alt="фото городка" width="520" height="260" >
-				</picture> 
-			</div>
-			<div class="container">			 
-				<ul class="about-list__inner">
-					<li class="about-list__inner-item">
+			
+			<picture class="grid__picture">
+				<source media="(min-width: 1200px)" srcset="img/list-img_desk.jpg" width="800" height="256">
+				<source media="(min-width: 768px)" srcset="img/list-img_tab.jpg" width="510" height="256">
+				<img class="about-list__item-img" width="520" height="260" src="img/list-img_mob.jpg" alt="фото городка">
+
+			</picture>
+
+				<ul class="about-list__inner grid__items container">
+					<li class="about-list__inner-item grid__items--1 ">
 						<h3 class="about-list__inner-title">Жилье</h3>
 						<p class="about-list__inner-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-					</li>
-					<li class="about-list__inner-item">
-						<h3 class="about-list__inner-title">Еда</h3>
-						<p class="about-list__inner-text">Всегда заказывайте фирмерный бурге, вы не разочаруетесь!</p>
-					</li>
-					<li class="about-list__inner-item">
+					</li>					
+					<li class="about-list__inner-item grid__items--2 ">
 						<h3 class="about-list__inner-title">Сувениры</h3>
 						<p class="about-list__inner-text">Не только китайского, но и местного производства!</p>
 					</li>
+					<li class="about-list__inner-item grid__items--3 ">
+						<h3 class="about-list__inner-title">Еда</h3>
+						<p class="about-list__inner-text">Всегда заказывайте фирмерный бургер, вы не разочаруетесь!</p>
+					</li>
 				</ul>
-			</div>
-		</li>
-		<!-- <li class="list-item">
-			<h2 class="list-item__title">Там есть мост дьявола</h2>
-			<div class="list-item__num">-№2-</div>
-			<p class="list-item__subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-		</li>
-		<li class="list-item">
-			<h2 class="list-item__title">Небольшая площадь</h2>
-			<div class="list-item__num">-№3-</div>
-			<p class="list-item__subtitle">Все интересные места находятся очень близко</p>
-		</li>
-		<li class="list-item">
-			<h2 class="list-item__title">Красивая дорога</h2>
-			<div class="list-item__num">-№4-</div>
-			<p class="list-item__subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-		</li>
-		<li class="list-item">
-			<h2 class="list-item__title">Мало туристов</h2>
-			<div class="list-item__num">-№5-</div>
-			<p class="list-item__subtitle">Большинство едет в Гранд Каньон и толпятся там</p>
-		</li> -->
+			</li>
+
+		    <li class="about-list__item grid grid--2">
+		    	<div class="about-list__item-content about-list__item-content--2 container grid__content">
+					<h2  class="about-list__item-title">Там есть мост дьявола</h2>
+					<div class="about-list__item-num">– №2 –</div>
+					<p class="about-list__item-subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+				</div>
+
+				<picture class="grid__picture">
+					<source media="(min-width: 1200px)" srcset="img/list-img2_desk.jpg" width="800" height="256">
+					<source media="(min-width: 768px)" srcset="img/list-img2_tab.jpg" width="512" height="256">
+					<img class="about-list__item-img" width="520" height="260" src="img/list-img2_mob.jpg" alt="фото городка">
+
+				</picture>
+			</li>
 		
+			<li class="about-list__item about-list__item--grey grid grid--grey">
+				<div class="about-list__item-content about-list__item-content--grey container">
+					<h2 class="about-list__item-title about-list__item-title--grey">Небольшая площадь</h2>
+					<div class="about-list__item-num about-list__item-num--grey">– №3 –</div>
+					<p class="about-list__item-subtitle about-list__item-subtitle--grey">Все интересные места находятся очень близко</p>
+				</div>
+			</li>
+			<li class="about-list__item about-list__item--grey grid grid--grey grid--grey2">
+				<div class="about-list__item-content about-list__item-content--grey container">
+					<h2 class="about-list__item-title about-list__item-title--grey">Красивая дорога</h2>
+					<div class="about-list__item-num about-list__item-num--grey">– №4 –</div>
+					<p class="about-list__item-subtitle about-list__item-subtitle--grey">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+				</div>
+			</li>
+			<li class="about-list__item about-list__item--grey grid grid--grey grid--grey3">
+				<div class="about-list__item-content about-list__item-content--grey container">
+					<h2 class="about-list__item-title about-list__item-title--grey">Мало туристов</h2>
+					<div class="about-list__item-num about-list__item-num--grey">– №5 –</div>
+					<p class="about-list__item-subtitle about-list__item-subtitle--grey">Большинство едет в Гранд Каньон и толпятся там</p>
+				</div>
+			</li> 
+			
 	</ol>
-	<picture>
-	    <source media="(min-width: 1200px)" srcset="img/list-img__desk.jpg" width="800" height="256">
-	    <source media="(min-width: 768px)" srcset="img/list-img__tab.jpg" width="517" height="256">
-	   	<img class="" src="img/list-img__mob.jpg" alt="фото городка" width="520" height="260" >
-	</picture>
-	<picture>
-	    <source media="(min-width: 1200px)" srcset="img/logo-desk.svg" width="187" height="97">
-	    <source media="(min-width: 768px)" srcset="img/logo-tab.svg" width="102" height="84">
-	    <img class="" width="102" height="82" src="img/logo-mob.svg" alt="лого">
-	</picture>    
+	   
 </section>
+
+
         
     </div>
 
-    <!-- подключаем js -->
-    <script src="js/main.js?t=1651070165130"></script>
+    <!-- подключаем js
+    <script src="js/main.js"></script>
 </body>
 
 </html>
