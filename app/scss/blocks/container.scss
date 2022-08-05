@@ -4,8 +4,10 @@
     padding: 0 20px;
     @include tablet {
         padding: 0 30px;
+        min-width: 0;
     }
     @include desktop {
         padding: 0 40px;
     }
+
 }
