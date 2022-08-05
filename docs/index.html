@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css?t=1659629522567">
+    <link rel="stylesheet" href="css/main.css?t=1659708185711">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -23,9 +23,9 @@ z-index: 100;
 opacity: .3;
 pointer-events: none; 
 }
-    </style> -->
-<!--    
-  <img class="test" src="img/test-mob.jpg" alt="">
+    </style>
+    -->
+<!--   <img class="test" src="img/test-tab.jpg" alt="">
     <style>
 .test {
 position: absolute;
@@ -162,17 +162,26 @@ pointer-events: none;
 			</div>
 			<ul class="about__list about__list--inner container">
 				<li class="about__list-item about__list-item--inner">
-					<img class="about__list-decore" src="img/list-decore.png" alt="жилье" width="39" height="36">
+					<picture>
+						<source media="(min-width: 768px)" srcset="img/list-decore-tab.png" width="75" height="72">
+						<img class="about__list-decore" src="img/list-decore.png" alt="жилье" width="39" height="36">
+					</picture>
 					<h3 class="about__list-title about__list-title--inner">Жилье</h3>
 					<p class="about__list-subtitle about__list-subtitle--inner">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 				</li>
 				<li class="about__list-item about__list-item--inner">
-					<img class="about__list-decore" src="img/list-decore2.png" alt="сувениры" width="32" height="37">
+					<picture>
+						<source media="(min-width: 768px)" srcset="img/list-decore2-tab.png" width="64" height="75">
+						<img class="about__list-decore" src="img/list-decore2.png" alt="сувениры" width="32" height="37">
+					</picture>					
 					<h3 class="about__list-title about__list-title--inner">Сувениры</h3>
 					<p class="about__list-subtitle about__list-subtitle--inner">Не только китайского, но и местного производства!</p>
 				</li>
 				<li class="about__list-item about__list-item--inner">
-					<img class="about__list-decore" src="img/list-decore3.png" alt="еда" width="40" height="34">
+					<picture>
+						<source media="(min-width: 768px)" srcset="img/list-decore3-tab.png" width="76" height="68">
+						<img class="about__list-decore" src="img/list-decore3.png" alt="еда" width="40" height="34">
+					</picture>					
 					<h3 class="about__list-title about__list-title--inner">Еда</h3>
 					<p class="about__list-subtitle about__list-subtitle--inner">Всегда заказывайте фирмерный бургер, вы не разочаруетесь!</p>
 				</li>
@@ -180,7 +189,7 @@ pointer-events: none;
 		</li>
 		<li class="about__list-item about__list-item--wide">
 			<div class="about__list-content about__list-content--reverse">
-				<div class="about__list-text">
+				<div class="about__list-text container">
 					<h2  class="about__list-title">Там есть мост дьявола</h2>
 					<div class="about__list-num">– №2 –</div>
 					<p class="about__list-subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
